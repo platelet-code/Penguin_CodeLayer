@@ -1,0 +1,18 @@
+CC = gcc
+
+# 源文件
+SRC = $(wildcard ./*.c)
+
+# 对象文件
+OBJS = $(patsubst %.c,%.o,$(SRC))
+
+# 目标文件
+TARGET = main
+
+# 最终目标
+$(TARGET): $(OBJS)
+	$(CC) $(OBJS) -o $(TARGET)
+
+# 从.c到.o的规则
+%.o: %.c
+	$(CC) -c $< -o $@
