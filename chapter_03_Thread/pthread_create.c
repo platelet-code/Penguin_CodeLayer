@@ -44,4 +44,4 @@ int main()
 //     - 返回值：
 //         成功：0
 //         失败：返回错误号。这个错误号和之前errno不太一样。
-//         获取错误号的信息：  char * strerror(int errnum);
+//         获取错误号的信息：  char *strerror(int errnum);
